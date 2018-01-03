@@ -9,6 +9,8 @@
 	<title>Portfolio of Emmanuelle Abendan</title>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Lato" rel="stylesheet">
+	<script src="https://use.fontawesome.com/bf9fbb10ef.js"></script>
 
 </head>
 <body>
@@ -16,34 +18,26 @@
 	<main class="mainWrapper">
 
 		<header id="header" class="rowWrapper">
-			<section id="headerRow1" class="row clear">
-				<div class="colWrapper">
-					<div class="col col-sm-12 col-md-8 col-lg-8 left">
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-					<div class="col col-sm-12 col-md-4 col-lg-4 right">
-						<div id="contactDetails">
-							<span>email@email.com</span>
-							<span>0000 000 000</span>
-						</div>
-					</div>
-				</div>	
-			</section><!--/.headerRow1 -->
-			<nav id="mainNav" class="row clear">
-				<div class="colWrapper">
-					<div class="col col-sm-12 col-md-8 col-lg-8 left">
+			<nav id="mainNav" class="row">
+				<div class="colWrapper clear">
+					<div id="navItems" class="col col-sm-12 col-md-7 col-lg-7 left">
 						<ul>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
+							<li><a href="#rowAbout">About</a></li>
+							<li><a href="#rowWorks">Works</a></li>
+							<li><a href="#rowEducation">Education</a></li>
+							<li><a href="#rowSkills">Skills</a></li>
 						</ul>
 					</div>
-					<div class="col col-sm-12 col-md-4 col-lg-4 right">
+					<div class="col col-sm-12 col-md-4 col-lg-4 left">
+						<div id="contactDetails">
+							<span><a href="mailto:emmanuelle.abendan@gmail.com">emmanuelle.abendan@gmail.com</a></span>
+							<span>0949 328 4719</span>
+						</div>
+					</div>
+					<div class="col col-sm-12 col-md-1 col-lg-1 right">
 						<div id="socialIcons">
-							<a id="facebook" href="https://www.facebook.com/"><img src="https://lorempixel.com/30/30/" alt="Facebook icon"></a>
-							<a id="linkedin" href="https://www.linkedin.com/"><img src="https://lorempixel.com/30/30/" alt="LinkedIn icon"></a>
+							<a id="facebook" href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook icon"></a>
+							<a id="linkedin" href="https://www.linkedin.com/"><img src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
 						</div>
 					</div>
 				</div>
@@ -52,44 +46,182 @@
 		<section id="rowBanner" class="row clear">
 			<div class="colWrapper">
 				<div id="colLeft" class="col col-sm-12 col-md-12 col-lg-6 left">
-					<a href="#">asdasd</a>
-					<a href="#">Download CV</a>
+					<div class="contents">
+						<img src="img/emmanuelle-abendan.jpg">
+						<h1>Hi, I'm Eman!</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<a href="#">Download CV</a>
+					</div>
 				</div>
 				<div id="colMid" class="col col-sm-6 col-md-6 col-lg-3 left">
-					<a href="#rowAbout">About</a>
-					<a href="#rowEducation">Education</a>
+					<div id="aboutBox">
+						<a href="#rowAbout">
+							<div class="boxContent">
+								<i class="fa fa-user-circle" aria-hidden="true"></i>
+								<h3>About Me</h3>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</a>
+					</div>
+					<div id="educationBox">
+						<a href="#rowEducation">
+							<div class="boxContent">
+								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+								<h3>Educational Background</h3>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</a>
+					</div>
 				</div>
 				<div id="colRight" class="col col-sm-6 col-md-6 col-lg-3 left">
-					<a href="#rowWorks">Works</a>
-					<a href="#rowSkills">Skills</a>
+					<div id="worksBox">
+						<a href="#rowWorks">
+							<div class="boxContent">
+								<i class="fa fa-cogs" aria-hidden="true"></i>
+								<h3>My Works</h3>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</a>
+					</div>
+					<div id="skillsBox">
+						<a href="#rowSkills">
+							<div class="boxContent">
+								<i class="fa fa-code" aria-hidden="true"></i>
+								<h3>My Skills</h3>
+								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section id="rowAbout" class="row">
 			<div class="colWrapper">
-				<div class="col">
-					<p>All about me</p>
+				<div class="col col-lg-6 left">
+					<h2>All about me</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="col col-lg-3 left">
+					<img src="https://lorempixel.com/300/300/" alt="Picture of Emmanuelle Abendan">
+					<img src="https://lorempixel.com/300/300/" alt="Picture of Emmanuelle Abendan">
+				</div>
+				<div class="col col-lg-3 right">
+					<h2>My Contact Details</h2>
+					<h4>Mobile</h4>
+					<p>0949 328 4719</p>
+					<h4>Email</h4>
+					<p><a href="mailto:emmanuelle.abendan@gmail.com">emmanuelle.abendan@gmail.com</a></p>	
+					<h2>My Social Medias</h2>
+					
 				</div>
 			</div>
 		</section>
 		<section id="rowSkills" class="row">
 			<div class="colWrapper">
-				<div class="col">
-					<p>My Skills</p>
+				<div class="col col-lg-8 left">
+					<h2>My Skills</h2>
+					<h3>Programming Languages</h3>
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<h3>Frameworks</h3>
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+					<h3>Others</h3>
+					<img src="https://lorempixel.com/150/150/">
+					<img src="https://lorempixel.com/150/150/">
+				</div>
+				<div class="col col-lg-4 right">
+					<h3>Extra Skills</h3>
+					<ul>
+					<li>Skill 1</li>
+					<li>Skill 2</li>
+					<li>Skill 3</li>
+					<li>Skill 4</li>
+					<li>Skill 5</li>
+					<li>Skill 6</li>
+					<li>Skill 7</li>
 				</div>
 			</div>
 		</section>
 		<section id="rowWorks" class="row">
 			<div class="colWrapper">
-				<div class="col">
+				<div class="col col-lg-4 left">
+					<h2>My Works</h2>
+					<h3>Training works</h3>
 					<a href="https://emmanuelleabendan.github.io/b3nc-abendan-emmanuelle/csp1/index.html" target="_blank">Capstone Project 1</a>
+					<a href="#" target="_blank">Capstone Project 2</a>
+					<a href="#" target="_blank">Capstone Project 3</a>
+				</div>
+				<div class="col col-lg-4 left">
+					<h3>Some examples of websites I've worked on</h3>
+					<ul>
+						<li><a href="https://www.radcliffeglassandwindows.co.uk/">https://www.radcliffeglassandwindows.co.uk/</a></li>
+						<li><a href="https://www.thevikingblindco.com/">https://www.thevikingblindco.com/</a></li>
+						<li><a href="https://www.mossmouldings.co.uk/">https://www.mossmouldings.co.uk/</a></li>
+						<li><a href="http://www.kirkrefrigeration.co.uk/">http://www.kirkrefrigeration.co.uk/</a></li>
+						<li><a href="http://www.mjdheatingservices.co.uk/">http://www.mjdheatingservices.co.uk/</a></li>
+						<li><a href="https://www.kingdomcoatings.com/">https://www.kingdomcoatings.com/</a></li>
+						<li><a href="https://www.veitchihomes.com/">https://www.veitchihomes.com/</a></li>
+						<li><a href="https://www.bespokeshelters.co.uk/">https://www.bespokeshelters.co.uk/</a></li>
+						<li><a href="https://www.alexanderwindows.co.uk/">https://www.alexanderwindows.co.uk/</a></li>
+						<li><a href="https://www.premierglazing-sheffield.co.uk/">https://www.premierglazing-sheffield.co.uk/</a></li>
+						<li><a href="http://www.gastechheating.co.uk/">http://www.gastechheating.co.uk/</a></li>
+						<li><a href="https://brant-concrete.com/">https://brant-concrete.com/</a></li>
+						<li><a href="https://www.capitolstairlifts.co.uk/">https://www.capitolstairlifts.co.uk/</a></li>
+					</ul>
+				</div>
+				<div class="col col-lg-4 right">
+					<ul>
+						<li><a href="https://www.avalonsales.co.uk">https://www.avalonsales.co.uk</a></li>
+						<li><a href="https://www.pmatradingwaterjetcutting.co.uk">https://www.pmatradingwaterjetcutting.co.uk</a></li>
+						<li><a href="https://www.carregfawrdevelopments.co.uk/">https://www.carregfawrdevelopments.co.uk/</a></li>
+						<li><a href="https://www.countrytimbermerchants.co.uk/">https://www.countrytimbermerchants.co.uk/</a></li>
+						<li><a href="https://www.flooringstylesmidlands.co.uk/">https://www.flooringstylesmidlands.co.uk/</a></li>
+						<li><a href="https://www.drakeplumbingandheating.com/">https://www.drakeplumbingandheating.com/</a></li>
+						<li><a href="http://www.albaofficecleaning.co.uk/">http://www.albaofficecleaning.co.uk/</a></li>
+						<li><a href="https://www.leylandforrest.co.uk/">https://www.leylandforrest.co.uk/</a></li>
+						<li><a href="https://www.mccormackpaintinganddecorating.co.uk/">https://www.mccormackpaintinganddecorating.co.uk/</a></li>
+						<li><a href="https://www.ballymenalocksmith.co.uk/">https://www.ballymenalocksmith.co.uk/</a></li>
+						<li><a href="https://www.actionskiphire.co.uk/">https://www.actionskiphire.co.uk/</a></li>
+						<li><a href="http://www.blockagegone.co.uk/">http://www.blockagegone.co.uk/</a></li>
+						<li><a href="https://www.ne-metal-fabrications.co.uk/">https://www.ne-metal-fabrications.co.uk/</a></li>
+						<li><a href="https://www.atplanthire.co.uk/">https://www.atplanthire.co.uk/</a></li>
+						<li><a href="http://www.hillsidekennels.co.uk/">http://www.hillsidekennels.co.uk/</a></li>
+						<li><a href="http://www.tyresinbournemouth.co.uk/">http://www.tyresinbournemouth.co.uk/</a></li>
+						<li><a href="https://www.sgblindsbelfast.co.uk/">https://www.sgblindsbelfast.co.uk/</a></li>
+						<li><a href="https://www.newwatermains.co.uk/">https://www.newwatermains.co.uk/</a></li>
+						<li><a href="https://www.motsbromsgrove.co.uk/">https://www.motsbromsgrove.co.uk/</a></li>
+						<li><a href="https://www.canopuscarriers.co.uk/">https://www.canopuscarriers.co.uk/</a></li>
+						<li><a href="https://www.barkbyroad-motcentre.co.uk/">https://www.barkbyroad-motcentre.co.uk/</a></li>
+						<li><a href="https://www.iridium-interiors.co.uk/">https://www.iridium-interiors.co.uk/</a></li>
+						<li><a href="https://www.shropshirefencingsupplies.co.uk/">https://www.shropshirefencingsupplies.co.uk/</a></li>
+						<li><a href="http://www.adamsandduxbury.co.uk/">http://www.adamsandduxbury.co.uk/</a></li>
+						<li><a href="https://www.aandkthomas.co.uk/">https://www.aandkthomas.co.uk/</a></li>
+						<li><a href="https://www.lisburnbitmacandasphalt.co.uk/">https://www.lisburnbitmacandasphalt.co.uk/</a></li>
+						<li><a href="http://www.vets-charnwood.co.uk/">http://www.vets-charnwood.co.uk/</a></li>
+						<li><a href="https://www.oneillbrosmasterjoiners.co.uk/">https://www.oneillbrosmasterjoiners.co.uk/</a></li>
+						<li><a href="https://www.prestigeblindswirral.co.uk/">https://www.prestigeblindswirral.co.uk/</a></li>
+					</ul>
 				</div>
 			</div>
 		</section>
 		<section id="rowEducation" class="row">
 			<div class="colWrapper">
-				<div class="col">
+				<div class="col col-lg-6 left">
+					<h2>Educational Background</h2>
+					<h3>Academic</h3>
 					<p>Education</p>
+				</div>
+				<div class="col col-lg-6 left">
+					<h3>Trainings</h3>
 				</div>
 			</div>
 		</section>

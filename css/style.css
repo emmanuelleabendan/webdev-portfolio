@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	background: url("../img/my-portfolio-main-background.jpg") no-repeat fixed center center / cover transparent;
+}
+
 .left {
 	float: left;
 }
@@ -18,9 +22,19 @@
 	clear: both;
 }
 
+/***fonts***/
+
+h1, h2, h3, h4 {
+	font-family: 'Bungee', cursive;
+}
+
+p, a, span {
+	font-family: 'Lato', sans-serif;
+}
+
 /***wrappers***/
 .mainWrapper {
-	width: 80%;
+	width: 95%;
 	margin: 0 auto;
 }
 
@@ -32,13 +46,14 @@
 
 
 /***header***/
-#headerRow1 {
-	padding: 10px 0;
-}
-
 #contactDetails,
 #socialIcons {
 	text-align: right;
+}
+
+#socialIcons img {
+    width: 30px;
+    margin-left: 4px;
 }
 
 /***navigation***/
@@ -57,6 +72,7 @@
 #rowBanner {
 	padding-bottom: 30px;
 	height: 90vh;
+	text-align: center;
 }
 
 #rowBanner .colWrapper {
@@ -67,18 +83,141 @@
 	height: 100%;
 }
 
+#rowBanner h1 {
+    color: #018fbf;
+}
+
+#rowBanner .contents {
+    color: #fff;
+}
+
 #colLeft {
-	background: url("https://lorempixel.com/1000/1000/") no-repeat scroll center center / cover transparent; 
+	background: url("../img/my-portfolio-main-box-background.jpg") no-repeat scroll center center / cover transparent; 
+	position: relative;
 }
 
-#colMid a,
-#colRight a {
-	background: url("https://lorempixel.com/1000/1000/") no-repeat scroll center center / cover transparent;
+#colLeft:before {
+    content: "";
+    background: rgba(0,0,0,0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#colLeft .contents {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 70%;
+}
+
+#colLeft img {
+    max-width: 250px;
+}
+
+#colLeft a {
+	color: #00b5f0;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+
+#aboutBox {
+	background: url("../img/my-portfolio-about-box-background.jpg") no-repeat scroll center center / cover transparent;	
+}
+
+#worksBox {
+	background: url("../img/my-portfolio-my-works-box-background.jpg") no-repeat scroll center center / cover transparent;	
+}
+
+#educationBox {
+	background: url("../img/my-portfolio-education-box-background.jpg") no-repeat scroll center center / cover transparent;	
+}
+
+#skillsBox {
+	background: url("../img/my-portfolio-my-skills-box-background.jpg") no-repeat scroll center center / cover transparent;	
+}
+
+#colMid > div,
+#colRight > div {
 	height: 50%;
-	display: block;
+	position: relative;
 }
 
-/***rowWorks***/
+#rowBanner .boxContent {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    display: inline-block;
+    color: #85e1ff;
+    max-width: 80%;
+    padding: 30px 20px;
+}
+
+#rowBanner a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+#rowBanner h3 {
+    line-height: 1.2em;
+    margin-top: 10px;
+}
+
+.description {
+	display: none;
+}
+
+#colMid a:before,
+#colRight a:before  {
+    content: "";
+    background-color: rgba(0,0,0,0.65);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+	transform: translate(-50%,-50%);
+	transition: 0.8s;
+}
+
+#colMid a:hover .boxContent,
+#colRight a:hover .boxContent {
+	color: #00374b;
+}
+
+#colMid a:hover:before,
+#colRight a:hover:before  {
+	width: 0;
+	height: 0;
+	transition: 0.8s;
+	border-radius: 50%;
+}
+
+#colMid a:hover .boxContent ,
+#colRight a:hover .boxContent   {
+	transition: 1s;
+    background-color: rgba(255,255,255,0.75);
+	border-radius: 20px;
+}
+
+#colMid a:hover .boxContent .description ,
+#colRight a:hover .boxContent .description   {
+	display: block;
+	margin-top: 15px;
+}
+
+#rowBanner .fa {
+    font-size: 7em;
+}
+
+/***rows***/
 #rowAbout,
 #rowSkills,
 #rowWorks,
@@ -92,9 +231,24 @@
 #rowWorks .colWrapper,
 #rowEducation .colWrapper {
     position: absolute;
-    top: 50%;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.5);
+    width: 100%;
+    min-height: 90vh;
+}
+
+#rowAbout .col,
+#rowSkills .col,
+#rowWorks .col,
+#rowEducation .col {
+    padding: 20px 40px 40px;
+}
+
+#rowAbout img {
+    width: 100%;
+	margin-top: 20px;
 }
 
 /***footer***/
@@ -221,12 +375,20 @@
 @media only screen and (min-width: 961px) {
 	/***header***/
 	#header {
-		height: 10vh;
+		height: 5vh;
+	}
+	
+	/***mainNav***/
+	#mainNav {
+		position: fixed;
+		width: 95%;
+		transform: translate(-50%,0);
+		left: 50%;
 	}
 	
 	/***rowBanner***/
 	#rowBanner {
-		height: 90vh;
+		height: 95vh;
 		padding-bottom: 30px;
 	}
 
