@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	word-wrap: break-word;
 }
 
 body {
@@ -26,6 +27,11 @@ body {
 
 h1, h2, h3, h4 {
 	font-family: 'Bungee', cursive;
+	line-height: 1.2em;
+}
+
+h4 {
+	margin-top: 20px;
 }
 
 p, a, span {
@@ -38,17 +44,16 @@ p, a, span {
 	margin: 0 auto;
 }
 
-.row,
-.col {
-	overflow: hidden;
-}
-
-
-
 /***header***/
 #contactDetails,
 #socialIcons {
 	text-align: right;
+}
+
+#navItems, 
+#contactDetails {
+    padding: 5px;
+    color: #fff;
 }
 
 #socialIcons img {
@@ -71,7 +76,7 @@ p, a, span {
 /***rowBanner***/
 #rowBanner {
 	padding-bottom: 30px;
-	height: 90vh;
+	height: 92vh;
 	text-align: center;
 }
 
@@ -84,7 +89,8 @@ p, a, span {
 }
 
 #rowBanner h1 {
-    color: #018fbf;
+    color: #85e1ff;
+	margin-top: 20px;
 }
 
 #rowBanner .contents {
@@ -173,18 +179,18 @@ p, a, span {
 	display: none;
 }
 
-#colMid a:before,
-#colRight a:before  {
+#colMid a:before, 
+#colRight a:before {
     content: "";
     background-color: rgba(0,0,0,0.65);
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
     display: block;
     width: 100%;
     height: 100%;
-	transform: translate(-50%,-50%);
-	transition: 0.8s;
+    transform: translatex(-50%);
+    transition: 0.8s;
 }
 
 #colMid a:hover .boxContent,
@@ -195,9 +201,7 @@ p, a, span {
 #colMid a:hover:before,
 #colRight a:hover:before  {
 	width: 0;
-	height: 0;
 	transition: 0.8s;
-	border-radius: 50%;
 }
 
 #colMid a:hover .boxContent ,
@@ -214,41 +218,110 @@ p, a, span {
 }
 
 #rowBanner .fa {
-    font-size: 7em;
+    font-size: 4em;
 }
 
 /***rows***/
-#rowAbout,
-#rowSkills,
-#rowWorks,
+#rowAbout, 
+#rowSkills, 
+#rowWorks, 
 #rowEducation {
 	min-height: 100vh;
-	position: relative;
+	padding-top: 50px;
 }
 
 #rowAbout .colWrapper,
 #rowSkills .colWrapper,
 #rowWorks .colWrapper,
 #rowEducation .colWrapper {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255,255,255,0.5);
-    width: 100%;
-    min-height: 90vh;
+	padding: 40px;
+	background-color: #fff;
+	min-height: 90vh;
 }
 
-#rowAbout .col,
-#rowSkills .col,
-#rowWorks .col,
-#rowEducation .col {
-    padding: 20px 40px 40px;
+.colHeading,
+.colContent {
+    padding: 20px;
 }
 
-#rowAbout img {
+.colHeading h2,
+.socialMedias h3,
+#rowSkills h3,
+#rowEducation h3 {
+	color: #00374b;
+}
+
+.colContent ul {
+    padding: 10px 20px;
+}
+
+/*rowAbout*/
+.contactDetails {
+    background-color: #00374b;
+    padding: 20px;
+}
+
+.contactDetails h3 {
+    color: #85e1ff;
+}
+
+.contactDetails h4,
+.contactDetails p,
+.contactDetails a {
+    color: #fff;
+}
+
+.socialMedias {
+    margin-top: 20px;
+}
+
+.socialMedias img {
+    width: 50px;
+	margin: 15px 5px 0 0;
+}
+
+.colImage img {
     width: 100%;
+}
+
+.colImage img + img {
 	margin-top: 20px;
+}
+
+/*rowWorks*/
+.colProjects a {
+    max-width: 200px;
+    text-align: center;
+    margin: 20px 35px 0 0;
+    display: inline-block;
+}
+
+.colProjects img {
+    max-width: 200px;
+}
+
+.colProjects p {
+    margin-top: 10px;
+}
+
+#rowWorks h3 {
+	color: #00374b;
+}
+
+/***rowSkills***/
+.frameworks, 
+.others {
+    margin-top: 50px;
+}
+
+#rowSkills img {
+    margin-top: 10px;
+}
+
+/***rowEducation***/
+.educInfo,
+.employInfo {
+    margin-top: 25px;
 }
 
 /***footer***/
@@ -384,14 +457,10 @@ p, a, span {
 		width: 95%;
 		transform: translate(-50%,0);
 		left: 50%;
+		z-index: 999;
 	}
 	
 	/***rowBanner***/
-	#rowBanner {
-		height: 95vh;
-		padding-bottom: 30px;
-	}
-
 	#rowBanner .colWrapper,
 	#rowBanner .col {
 		height: 100%;
