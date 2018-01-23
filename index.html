@@ -8,9 +8,8 @@
 
 	<title>Portfolio of Emmanuelle Abendan</title>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Bungee|Lato" rel="stylesheet">
-	<script src="https://use.fontawesome.com/bf9fbb10ef.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
@@ -22,10 +21,10 @@
 				<div class="colWrapper clear">
 					<div id="navItems" class="col col-sm-12 col-md-7 col-lg-7 left">
 						<ul>
-							<li><a href="#rowAbout">About</a></li>
-							<li><a href="#rowWorks">Works</a></li>
-							<li><a href="#rowEducation">Education/Employment</a></li>
-							<li><a href="#rowSkills">Skills</a></li>
+							<li onclick="ScrollTo('rowAbout')">About</li>
+							<li onclick="ScrollTo('rowSkills')">Skills</li>
+							<li onclick="ScrollTo('rowWorks')">Works</li>
+							<li onclick="ScrollTo('rowEducation')">Education/Employment</li>
 						</ul>
 					</div>
 					<div class="col col-sm-12 col-md-4 col-lg-4 left">
@@ -54,48 +53,40 @@
 					</div>
 				</div>
 				<div id="colMid" class="col col-sm-6 col-md-6 col-lg-3 left">
-					<div id="aboutBox">
-						<a href="#rowAbout">
-							<div class="boxContent">
-								<i class="fa fa-user-circle" aria-hidden="true"></i>
-								<h3>About Me</h3>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-						</a>
+					<div id="aboutBox" class="boxContentWrapper" onclick="ScrollTo('rowAbout')">
+						<div class="boxContent">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+							<h3>About Me</h3>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
 					</div>
-					<div id="educationBox">
-						<a href="#rowEducation">
-							<div class="boxContent">
-								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-								<h3>Education and Employment</h3>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-						</a>
+					<div id="educationBox" class="boxContentWrapper" onclick="ScrollTo('rowEducation')">
+						<div class="boxContent">
+							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+							<h3>Education and Employment</h3>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
 					</div>
 				</div>
 				<div id="colRight" class="col col-sm-6 col-md-6 col-lg-3 left">
-					<div id="worksBox">
-						<a href="#rowWorks">
-							<div class="boxContent">
-								<i class="fa fa-cogs" aria-hidden="true"></i>
-								<h3>My Works</h3>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-						</a>
+					<div id="worksBox" class="boxContentWrapper" onclick="ScrollTo('rowWorks')">
+						<div class="boxContent">
+							<i class="fa fa-cogs" aria-hidden="true"></i>
+							<h3>My Works</h3>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
 					</div>
-					<div id="skillsBox">
-						<a href="#rowSkills">
-							<div class="boxContent">
-								<i class="fa fa-code" aria-hidden="true"></i>
-								<h3>My Skills</h3>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-						</a>
+					<div id="skillsBox" class="boxContentWrapper" onclick="ScrollTo('rowSkills')">
+						<div class="boxContent">
+							<i class="fa fa-code" aria-hidden="true"></i>
+							<h3>My Skills</h3>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section id="rowAbout" class="row">
+		<section id="rowAbout" class="row rowContent">
 			<div class="colWrapper clear">
 				<div class="col colHeading">
 					<h2>About Me</h2>
@@ -129,7 +120,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="rowSkills" class="row">
+		<section id="rowSkills" class="row rowContent">
 			<div class="colWrapper clear">
 				<div class="col colHeading">
 					<h2>My Skills</h2>
@@ -170,7 +161,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="rowWorks" class="row">
+		<section id="rowWorks" class="row rowContent">
 			<div class="colWrapper clear">
 				<div class="col colHeading">
 					<h2>My Works</h2>
@@ -230,7 +221,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="rowEducation" class="row">
+		<section id="rowEducation" class="row rowContent">
 			<div class="colWrapper clear">
 				<div class="col colHeading">
 					<h2>Education and Employement</h2>
@@ -283,6 +274,8 @@
 		
 	</main><!--/.mainWrapper -->
 	
-			
+	<script src="js/script.js"></script>
+	
+	<script src="https://use.fontawesome.com/bf9fbb10ef.js"></script>	
 </body>
 </html>

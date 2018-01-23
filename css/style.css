@@ -40,7 +40,7 @@ p, a, span {
 
 /***wrappers***/
 .mainWrapper {
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -63,7 +63,7 @@ p, a, span {
 
 /***navigation***/
 #mainNav {
-	padding: 10px 0;
+	padding: 10px 40px;
 }
 
 #mainNav li {
@@ -72,11 +72,13 @@ p, a, span {
     margin-right: 20px;
 }
 
+#mainNav li:hover {
+	cursor: pointer;
+}
 
 /***rowBanner***/
 #rowBanner {
-	padding-bottom: 30px;
-	height: 92vh;
+	height: 95vh;
 	text-align: center;
 }
 
@@ -154,7 +156,7 @@ p, a, span {
 	position: relative;
 }
 
-#rowBanner .boxContent {
+.boxContentWrapper .boxContent {
     top: 50%;
     position: relative;
     transform: translateY(-50%);
@@ -162,12 +164,6 @@ p, a, span {
     color: #85e1ff;
     max-width: 80%;
     padding: 30px 20px;
-}
-
-#rowBanner a {
-	display: block;
-	height: 100%;
-	text-decoration: none;
 }
 
 #rowBanner h3 {
@@ -179,8 +175,11 @@ p, a, span {
 	display: none;
 }
 
-#colMid a:before, 
-#colRight a:before {
+.boxContentWrapper:hover {
+	cursor: pointer;
+}
+
+.boxContentWrapper:before {
     content: "";
     background-color: rgba(0,0,0,0.65);
     position: absolute;
@@ -193,26 +192,19 @@ p, a, span {
     transition: 0.8s;
 }
 
-#colMid a:hover .boxContent,
-#colRight a:hover .boxContent {
+.boxContentWrapper:hover .boxContent {
 	color: #00374b;
-}
-
-#colMid a:hover:before,
-#colRight a:hover:before  {
-	width: 0;
-	transition: 0.8s;
-}
-
-#colMid a:hover .boxContent ,
-#colRight a:hover .boxContent   {
 	transition: 1s;
     background-color: rgba(255,255,255,0.75);
 	border-radius: 20px;
 }
 
-#colMid a:hover .boxContent .description ,
-#colRight a:hover .boxContent .description   {
+.boxContentWrapper:hover:before  {
+	width: 0;
+	transition: 0.8s;
+}
+
+.boxContentWrapper:hover .description {
 	display: block;
 	margin-top: 15px;
 }
@@ -222,18 +214,14 @@ p, a, span {
 }
 
 /***rows***/
-#rowAbout, 
-#rowSkills, 
-#rowWorks, 
-#rowEducation {
-	min-height: 100vh;
-	padding-top: 50px;
+.rowContent {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
 }
 
-#rowAbout .colWrapper,
-#rowSkills .colWrapper,
-#rowWorks .colWrapper,
-#rowEducation .colWrapper {
+.rowContent .colWrapper {
 	padding: 40px;
 	background-color: #fff;
 	min-height: 90vh;
@@ -454,7 +442,7 @@ p, a, span {
 	/***mainNav***/
 	#mainNav {
 		position: fixed;
-		width: 95%;
+		width: 100%;
 		transform: translate(-50%,0);
 		left: 50%;
 		z-index: 999;
