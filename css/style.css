@@ -78,16 +78,7 @@ p, a, span {
 
 /***rowBanner***/
 #rowBanner {
-	height: 95vh;
-	text-align: center;
-}
-
-#rowBanner .colWrapper {
-	height: 50%;
-}
-	
-#rowBanner .col {
-	height: 100%;
+    text-align: center;
 }
 
 #rowBanner h1 {
@@ -116,16 +107,17 @@ p, a, span {
 }
 
 #colLeft .contents {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 30px 10px;
 }
 
 #colLeft img {
-    max-width: 250px;
+    max-width: 150px;
 }
+
 
 #colLeft a {
 	color: #00b5f0;
@@ -150,20 +142,32 @@ p, a, span {
 	background: url("../img/my-portfolio-my-skills-box-background.jpg") no-repeat scroll center center / cover transparent;	
 }
 
-#colMid > div,
-#colRight > div {
-	height: 50%;
-	position: relative;
+#colMid > div, #colRight > div {
+    position: relative;
+    padding: 40px;
+}
+
+.boxContentWrapper:before {
+	content: "";
+	background-color: rgba(0,0,0,0.65);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: translatex(-50%);
+	transition: 0.8s;
 }
 
 .boxContentWrapper .boxContent {
-    top: 50%;
     position: relative;
-    transform: translateY(-50%);
     display: inline-block;
-    color: #85e1ff;
-    max-width: 80%;
-    padding: 30px 20px;
+    padding: 20px;
+	color: #00374b;
+    background-color: rgba(255,255,255,0.75);
+    border-radius: 20px;
+	max-width: 270px;
 }
 
 #rowBanner h3 {
@@ -171,25 +175,8 @@ p, a, span {
     margin-top: 10px;
 }
 
-.description {
-	display: none;
-}
-
 .boxContentWrapper:hover {
 	cursor: pointer;
-}
-
-.boxContentWrapper:before {
-    content: "";
-    background-color: rgba(0,0,0,0.65);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: block;
-    width: 100%;
-    height: 100%;
-    transform: translatex(-50%);
-    transition: 0.8s;
 }
 
 .boxContentWrapper:hover .boxContent {
@@ -199,37 +186,27 @@ p, a, span {
 	border-radius: 20px;
 }
 
-.boxContentWrapper:hover:before  {
-	width: 0;
-	transition: 0.8s;
-}
-
-.boxContentWrapper:hover .description {
-	display: block;
-	margin-top: 15px;
-}
-
 #rowBanner .fa {
     font-size: 4em;
 }
 
 /***rows***/
 .rowContent {
-    width: 95%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 50px;
+    padding-top: 15px;
+	text-align: center;
 }
 
 .rowContent .colWrapper {
-	padding: 40px;
-	background-color: #fff;
-	min-height: 90vh;
+    padding: 20px;
+    background-color: #fff;
 }
 
-.colHeading,
+.colHeading, 
 .colContent {
-    padding: 20px;
+    padding: 10px 0;
 }
 
 .colHeading h2,
@@ -244,6 +221,10 @@ p, a, span {
 }
 
 /*rowAbout*/
+#rowAbout .col > img {
+    width: 100%;
+}
+
 .contactDetails {
     background-color: #00374b;
     padding: 20px;
@@ -268,24 +249,16 @@ p, a, span {
 	margin: 15px 5px 0 0;
 }
 
-.colImage img {
-    width: 100%;
-}
-
-.colImage img + img {
-	margin-top: 20px;
-}
-
 /*rowWorks*/
 .colProjects a {
-    max-width: 200px;
     text-align: center;
-    margin: 20px 35px 0 0;
+    margin: 20px auto;
     display: inline-block;
+	max-width: 250px;
 }
 
 .colProjects img {
-    max-width: 200px;
+    width: 100%;
 }
 
 .colProjects p {
@@ -304,6 +277,7 @@ p, a, span {
 
 #rowSkills img {
     margin-top: 10px;
+    max-width: 80px;
 }
 
 /***rowEducation***/
@@ -318,15 +292,27 @@ p, a, span {
 }
 
 /***backTotop***/
-#backTotop {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    margin: 20px;
+#backToTop {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 999; 
+    border: none; 
+    outline: none;
+    background-color: #3490cb;
+    color: white; 
+    cursor: pointer;
+    padding: 15px; 
+    border-radius: 10px; 
+}
+
+#backToTop:hover {
+    background-color: #00374b; 
 }
 
 /* mobile or small-sized devices */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 
 	/***GRID sizes***/
 	.col-sm-1 {
@@ -380,7 +366,26 @@ p, a, span {
 } 
 
 /* tablet or medium-sized devices */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	/***rowBanner***/
+	#colLeft {
+		padding: 100px;
+	}
+	
+	/***rows***/
+	.rowContent {
+		text-align: left;
+	}
+	
+	.colHeading, 
+	.colContent {
+		padding: 10px;
+	}
+	
+	/***rowWorks***/	
+	.colProjects a {
+		margin: 20px 35px 0 0;
+	}
 
 	/***GRID sizes***/
 	.col-md-1 {
@@ -433,12 +438,7 @@ p, a, span {
 } 
 
 /* desktop or large-sized devices */
-@media only screen and (min-width: 961px) {
-	/***header***/
-	#header {
-		height: 5vh;
-	}
-	
+@media only screen and (min-width: 1025px) {
 	/***mainNav***/
 	#mainNav {
 		position: fixed;
@@ -446,12 +446,92 @@ p, a, span {
 		transform: translate(-50%,0);
 		left: 50%;
 		z-index: 999;
+		top: -55px;
+		transition: top 0.3s;
+		background-color: #3490cb;
 	}
 	
 	/***rowBanner***/
+	#rowBanner {
+		height: 100vh;
+	}
+	
 	#rowBanner .colWrapper,
 	#rowBanner .col {
 		height: 100%;
+	}
+	
+	#colLeft .contents {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 70%;
+	}
+	
+	#colLeft img {
+		max-width: 250px;
+	}
+	
+	#colMid > div,
+	#colRight > div {
+		height: 50%;
+		position: relative;
+		padding: 20px 10px;
+	}
+	
+	.boxContentWrapper .boxContent {
+		top: 50%;
+		transform: translateY(-50%);
+		color: #85e1ff;
+		max-width: 80%;
+		padding: 30px 20px;
+		background-color: transparent;
+	}
+	
+	.description {
+		display: none;
+	}
+
+	.boxContentWrapper:hover .description {
+		display: block;
+		margin-top: 15px;
+	}
+	
+	.boxContentWrapper:hover:before  {
+		width: 0;
+		transition: 0.8s;
+	}
+	
+	/***rows***/
+	.rowContent {
+		width: 95%;
+		padding-top: 50px;
+		text-align: left;
+	}
+	
+	.rowContent .colWrapper {
+		padding: 40px;
+		min-height: 90vh;
+	}
+	
+	.colHeading,
+	.colContent {
+		padding: 20px;
+	}
+	
+	/***rowAbout***/
+	#rowAbout .col > img {
+		max-width: 730px;
+	}
+	
+	/***rowSkills***/
+	#rowSkills img {
+		max-width: 100%;
+	}
+	
+	/***rowWorks***/	
+	.colProjects a {
+		margin: 20px 35px 0 0;
 	}
 	
 	
