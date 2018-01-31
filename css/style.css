@@ -45,15 +45,9 @@ p, a, span {
 }
 
 /***header***/
-#contactDetails,
+#contactDetails, 
 #socialIcons {
-	text-align: right;
-}
-
-#navItems, 
-#contactDetails {
-    padding: 5px;
-    color: #fff;
+    display: none;
 }
 
 #socialIcons img {
@@ -62,18 +56,66 @@ p, a, span {
 }
 
 /***navigation***/
+.nav-button {
+    color: #fff;
+    font-size: 25px;
+    padding: 3px 10px 5px;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0,55,75,.75);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 #mainNav {
-	padding: 10px 40px;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    top: 0;
+    transition: 0.5s;
+    background-color: #3490cb;
+	overflow: hidden;
+}
+
+.open-nav {
+	height: 280px;
+	width: 280px;
+}
+
+.close-nav {
+	height: 0;
+	width: 0;
+}
+
+#nav-links {
+    padding: 20px 50px;
+    color: #fff;
 }
 
 #mainNav li {
     list-style: none;
-    display: inline;
-    margin-right: 20px;
+    padding: 10px;
+    white-space: nowrap;
+	width: 200px;
 }
 
 #mainNav li:hover {
 	cursor: pointer;
+}
+
+#nav-items {
+    padding: 0 40px;
+}
+
+#contact-icons {
+    text-align: center;
+	width: 200px;
+}
+
+#contact-icons  a {
+	font-size: 2.5em;
+    color: #00374b;
 }
 
 /***rowBanner***/
@@ -147,6 +189,10 @@ p, a, span {
     padding: 40px;
 }
 
+.boxContentWrapper {
+	overflow: hidden;
+}
+
 .boxContentWrapper:before {
 	content: "";
 	background-color: rgba(0,0,0,0.65);
@@ -154,7 +200,7 @@ p, a, span {
 	top: 0;
 	left: 50%;
 	display: block;
-	width: 100%;
+	width: 102%;
 	height: 100%;
 	transform: translatex(-50%);
 	transition: 0.8s;
@@ -220,9 +266,13 @@ p, a, span {
     padding: 10px 20px;
 }
 
+figure img {
+	width: 100%;
+}
+
 /*rowAbout*/
-#rowAbout .col > img {
-    width: 100%;
+#rowAbout .left figure {
+	margin-top: 20px;
 }
 
 .contactDetails {
@@ -232,6 +282,7 @@ p, a, span {
 
 .contactDetails h3 {
     color: #85e1ff;
+    margin-top: 20px;
 }
 
 .contactDetails h4,
@@ -250,6 +301,10 @@ p, a, span {
 }
 
 /*rowWorks*/
+#projects {
+    text-align: center;
+}
+
 .colProjects a {
     text-align: center;
     margin: 20px auto;
@@ -257,16 +312,41 @@ p, a, span {
 	max-width: 250px;
 }
 
-.colProjects img {
-    width: 100%;
-}
-
-.colProjects p {
+.colProjects figcaption {
     margin-top: 10px;
 }
 
 #rowWorks h3 {
 	color: #00374b;
+}
+
+.colSampleWorks ul {
+    text-align: center;
+    background-color: #efefef;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	margin-top: 20px;
+}
+
+.colSampleWorks li {
+    list-style: none;
+    max-width: 180px;
+    height: 300px;
+    display: inline-block;
+    margin: 15px;
+    border: 5px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.colSampleWorks figure {
+    height: 220px;
+    overflow: hidden;
+}
+
+.colSampleWorks figcaption {
+    margin-top: 10px;
 }
 
 /***rowSkills***/
@@ -295,8 +375,8 @@ p, a, span {
 #backToTop {
     display: none; 
     position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
+    bottom: 10px; 
+    right: 10px; 
     z-index: 999; 
     border: none; 
     outline: none;
@@ -382,9 +462,18 @@ p, a, span {
 		padding: 10px;
 	}
 	
+	/***rowAbout***/
+	#rowAbout .left figure {
+		width: 49%;
+	}
+	
+	#rowAbout .left figure:first-of-type {
+		margin-right: 2%;
+	}
+	
 	/***rowWorks***/	
 	.colProjects a {
-		margin: 20px 35px 0 0;
+		margin: 20px 30px 0 0;
 	}
 
 	/***GRID sizes***/
@@ -441,14 +530,46 @@ p, a, span {
 @media only screen and (min-width: 1025px) {
 	/***mainNav***/
 	#mainNav {
-		position: fixed;
 		width: 100%;
-		transform: translate(-50%,0);
-		left: 50%;
-		z-index: 999;
-		top: -55px;
-		transition: top 0.3s;
-		background-color: #3490cb;
+	}
+	
+	.nav-button,
+	#contact-icons {
+		display: none;
+	}
+	
+	#nav-items {
+		text-align: right;
+		padding: 0;
+	}
+	
+	#nav-links {
+		padding: 20px;
+	}
+	
+	#mainNav li {
+		display: inline;
+		margin-right: 20px;
+		padding: 0;
+	}
+	
+	#contactDetails, 
+	#socialIcons {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	#contactDetails {
+		padding: 20px;
+		color: #fff;
+	}
+	
+	#contactDetails span {
+		margin-left: 15px;
+	}
+	
+	#socialIcons {
+		padding-right: 20px;
 	}
 	
 	/***rowBanner***/
@@ -520,8 +641,12 @@ p, a, span {
 	}
 	
 	/***rowAbout***/
-	#rowAbout .col > img {
-		max-width: 730px;
+	#rowAbout .left figure {
+		width: 49%;
+	}
+	
+	#rowAbout .left figure:first-of-type {
+		margin-right: 2%;
 	}
 	
 	/***rowSkills***/
@@ -531,7 +656,7 @@ p, a, span {
 	
 	/***rowWorks***/	
 	.colProjects a {
-		margin: 20px 35px 0 0;
+		margin: 20px 30px;
 	}
 	
 	
