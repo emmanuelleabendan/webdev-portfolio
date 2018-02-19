@@ -26,7 +26,7 @@ body {
 /***fonts***/
 
 h1, h2, h3, h4 {
-	font-family: 'Bungee', cursive;
+	font-family: 'Signika', sans-serif;
 	line-height: 1.2em;
 }
 
@@ -310,6 +310,7 @@ figure img {
     margin: 20px auto;
     display: inline-block;
 	max-width: 250px;
+	vertical-align: top;
 }
 
 .colProjects figcaption {
@@ -330,7 +331,7 @@ figure img {
 
 .colSampleWorks li {
     list-style: none;
-    max-width: 180px;
+    max-width: 200px;
     height: 300px;
     display: inline-block;
     margin: 15px;
@@ -340,6 +341,11 @@ figure img {
     overflow: hidden;
 }
 
+.colSampleWorks li:hover {
+    transform: scale(1.15);
+    transition: transform 0.2s linear;
+}
+
 .colSampleWorks figure {
     height: 220px;
     overflow: hidden;
@@ -347,6 +353,57 @@ figure img {
 
 .colSampleWorks figcaption {
     margin-top: 10px;
+}
+
+/* popup */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popuptext {
+    visibility: visible;
+    width: 90%;
+    background-color: rgba(0,55,75,.85);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin-top: 20px;
+}
+
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,55,75,.85) transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 
 /***rowSkills***/
@@ -531,6 +588,7 @@ figure img {
 	/***mainNav***/
 	#mainNav {
 		width: 100%;
+		top: -65px;
 	}
 	
 	.nav-button,
@@ -659,6 +717,20 @@ figure img {
 		margin: 20px 30px;
 	}
 	
+	/* popup */
+	.popuptext {
+		visibility: hidden;
+		position: absolute;
+		bottom: 20px;
+		top: auto;
+		margin-top: 0;
+		display: inline;
+	}
+
+	.popuptext::after {
+		top: 100%;
+		border-color: rgba(0,55,75,.85) transparent transparent transparent;
+	}
 	
 	/***GRID sizes***/
 	.col-lg-1 {
