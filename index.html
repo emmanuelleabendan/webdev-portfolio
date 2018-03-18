@@ -8,15 +8,14 @@
 
 	<title>Portfolio of Emmanuelle Abendan</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Bungee|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Signika|Lato" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
 
 	<main class="mainWrapper">
-		
-		<span id="top"></span>
+
 		<header id="header" class="rowWrapper">
 			<nav id="mainNav" class="row close-nav">
 			<span class="nav-button" onclick="openCloseNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -46,7 +45,7 @@
 				</div>
 			</nav>
 		</header>
-		<section id="rowBanner" class="row">
+		<section id="rowBanner" class="row clear">
 			<div class="colWrapper">
 				<div id="colLeft" class="col col-sm-12 col-md-12 col-lg-6 left">
 					<div class="contents">
@@ -183,21 +182,24 @@
 					<h3>Recent Projects</h3>
 					<div id="projects">
 						<a href="https://emmanuelleabendan.github.io/b3nc-abendan-emmanuelle/csp1/index.html" target="_blank">
-							<figure>
-								<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-								<figcaption>Capstone Project 1</figcaption>
+							<figure id="pop-up1" class="popup" onmouseenter="popupShow(this.id)" onmouseleave="popupShow(this.id)">
+								<img src="img/capstone-project-1.jpg" alt="Josie's Delicacies thumbnail">
+								<figcaption>Josie's Delicacies</figcaption>
+								<span class="popuptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+							</figure>
+						</a>
+						<a href="https://seniorita-chartii.000webhostapp.com/" target="_blank">
+							<figure id="pop-up2" class="popup" onmouseenter="popupShow(this.id)" onmouseleave="popupShow(this.id)">
+								<img src="img/capstone-project-two.png" alt="Seniorita Chartii thumbnail">
+								<figcaption>Seniorita Chartii</figcaption>
+								<span class="popuptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
 							</figure>
 						</a>
 						<a href="https://emmanuelleabendan.github.io/b3nc-abendan-emmanuelle/csp1/index.html" target="_blank">
-							<figure>
-								<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-								<figcaption>Capstone Project 2</figcaption>
-							</figure>
-						</a>
-						<a href="https://emmanuelleabendan.github.io/b3nc-abendan-emmanuelle/csp1/index.html" target="_blank">
-							<figure>
+							<figure id="pop-up3" class="popup" onmouseenter="popupShow(this.id)" onmouseleave="popupShow(this.id)">
 								<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
 								<figcaption>Capstone Project 3</figcaption>
+								<span class="popuptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
 							</figure>
 						</a>
 					</div>
@@ -208,7 +210,7 @@
 						<li>					
 							<a href="https://www.radcliffeglassandwindows.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Radcliffe Glass &amp; Windows thumbnail">
+									<img src="img/radcliffeglassandwindows-thumb.jpg" alt="Radcliffe Glass &amp; Windows thumbnail">
 								</figure>
 								<figcaption>Radcliffe Glass &amp; Windows</figcaption>
 							</a>
@@ -216,7 +218,7 @@
 						<li>					
 							<a href="https://www.thevikingblindco.com/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="The Viking Blind Co thumbnail">								
+									<img src="img/thevikingblindco-thumb.jpg" alt="The Viking Blind Co thumbnail">								
 								</figure>
 								<figcaption>The Viking Blind Co</figcaption>
 							</a>
@@ -224,7 +226,7 @@
 						<li>					
 							<a href="https://www.mossmouldings.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Moss Mouldings thumbnail">									
+									<img src="img/moss-mouldings-thumb.jpg" alt="Moss Mouldings thumbnail">									
 								</figure>
 								<figcaption>Moss Mouldings</figcaption>
 							</a>
@@ -232,7 +234,7 @@
 						<li>					
 							<a href="http://www.kirkrefrigeration.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="KIRK Refrigeration thumbnail">									
+									<img src="img/kirk-refrigeration-thumb.jpg" alt="KIRK Refrigeration thumbnail">									
 								</figure>
 								<figcaption>KIRK Refrigeration</figcaption>
 							</a>
@@ -240,23 +242,15 @@
 						<li>					
 							<a href="http://www.mjdheatingservices.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="MJD Plumbing &amp; Heating Services ltd thumbnail">
+									<img src="img/mjd-plumbing-heating-services-thumb.jpg" alt="MJD Plumbing &amp; Heating Services ltd thumbnail">
 								</figure>
 								<figcaption>MJD Plumbing &amp; Heating Services ltd</figcaption>
 							</a>
 						</li>
 						<li>					
-							<a href="https://www.kingdomcoatings.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Kingdom Coatings thumbnail">									
-								</figure>
-								<figcaption>Kingdom Coatings</figcaption>
-							</a>
-						</li>
-						<li>					
 							<a href="https://www.veitchihomes.com/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Veitchi Homes thumbnail">									
+									<img src="img/veitchi-homes-thumb.jpg" alt="Veitchi Homes thumbnail">									
 								</figure>
 								<figcaption>Veitchi Homes</figcaption>
 							</a>
@@ -264,7 +258,7 @@
 						<li>					
 							<a href="https://www.bespokeshelters.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Bespoke Shelters thumbnail">									
+									<img src="img/bespoke-shelters-thumb.jpg" alt="Bespoke Shelters thumbnail">									
 								</figure>
 								<figcaption>Bespoke Shelters</figcaption>
 							</a>
@@ -272,7 +266,7 @@
 						<li>					
 							<a href="https://www.alexanderwindows.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Alexander Windows thumbnail">									
+									<img src="img/alexander-windows-thumb.jpg" alt="Alexander Windows thumbnail">									
 								</figure>
 								<figcaption>Alexander Windows</figcaption>
 							</a>
@@ -280,7 +274,7 @@
 						<li>					
 							<a href="https://www.premierglazing-sheffield.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Premier Glazing Services thumbnail">									
+									<img src="img/premier-glazing-services-ltd-thumb.jpg" alt="Premier Glazing Services thumbnail">									
 								</figure>
 								<figcaption>Premier Glazing Services</figcaption>
 							</a>
@@ -288,163 +282,43 @@
 						<li>					
 							<a href="http://www.gastechheating.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Gastech Heating and Plumbing thumbnail">								
+									<img src="img/gastech-heating-plumbing-thumb.jpg" alt="Gastech Heating and Plumbing thumbnail">								
 								</figure>
 								<figcaption>Gastech Heating and Plumbing</figcaption>
 							</a>
 						</li>
 						<li>					
-							<a href="https://brant-concrete.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Brant Concrete thumbnail">									
-								</figure>
-								<figcaption>Brant Concrete</figcaption>
-							</a>
-						</li>
-						<li>					
 							<a href="https://www.capitolstairlifts.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Capitol Stairlifts thumbnail">									
+									<img src="img/capitol-stairlifts-thumb.jpg" alt="Capitol Stairlifts thumbnail">									
 								</figure>
 								<figcaption>Capitol Stairlifts</figcaption>
 							</a>
 						</li>
 						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
+							<a href="https://www.gmfoundations.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
+									<img src="img/gm-building-foundations-thumb.jpg" alt="GM Building Foundations thumbnail">
 								</figure>
+								<figcaption>GM Building Foundations</figcaption>
 							</a>
 						</li>
 						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
+							<a href="http://www.groundsellcontracting.com/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
+									<img src="img/groundsell-contracting-limited-thumb.jpg" alt="Groundsell Contracting Ltd thumbnail">
 								</figure>
+								<figcaption>Groundsell Contracting Ltd</figcaption>
 							</a>
 						</li>
 						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
+							<a href="https://www.seasons-roofing.co.uk/" target="_blank">
 								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
+									<img src="img/seasons-roofing-thumb.jpg" alt="Seasons Roofing thumbnail">
 								</figure>
+								<figcaption>Seasons Roofing</figcaption>
 							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li><li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-									<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-								</figure>
-							</a>
-						</li>
-						
+						</li>			
 
 					</ul>
 				</div>
@@ -453,7 +327,7 @@
 		<section id="rowEducation" class="row rowContent">
 			<div class="colWrapper clear">
 				<div class="col colHeading">
-					<h2>Education and Employement</h2>
+					<h2>Education and Employment</h2>
 				</div>
 				<div class="col colContent col-sm-12 col-lg-6 left">
 					<h3>Academic</h3>
@@ -499,7 +373,7 @@
 			<p>Copyright &copy; 2017</p>
 		</footer>
 		
-		<button onclick="ScrollTo('top')" id="backToTop" title="Go to top">Top</button>
+		<button onclick="ScrollTo('header')" id="backToTop" title="Go to top">Top</button>
 		
 	</main><!--/.mainWrapper -->
 	

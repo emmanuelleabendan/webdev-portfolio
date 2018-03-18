@@ -1,4 +1,4 @@
-//*****NAV*****//*****SCROLL TO TOP*****
+//*****NAV*****//*****BACK TO TOP*****
 window.onscroll = function() {scrollFunction()};
 
 if (document.documentElement.clientWidth > 1024) { //Viewport wider than 1024px
@@ -30,27 +30,30 @@ if (document.documentElement.clientWidth > 1024) { //Viewport wider than 1024px
 }
 
 //*****PAGE SCROLL*****
-function ScrollTo(name) {
-  //init thread
-  ScrollToRow(document.getElementById(name));
+scrollToRow = (element) => {
+  window.scroll({
+    behavior: 'smooth',
+    left: 0,
+    top: element.offsetTop
+  });
+  console
 }
 
-function ScrollToRow(elem) {
-  var jump = elem.getBoundingClientRect().top * .2;
-  document.documentElement.scrollTop += jump;
-  
-  //lastjump detects anchor unreachable, also manual scrolling to cancel animation if scroll > jump
-  if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
-	elem.lastjump = Math.abs(jump);
-    setTimeout(function() {
-      ScrollToRow(elem);
-    }, "20");
-  } else {
-    elem.lastjump = null;
-  }
-  console.log('jump is' + jump)
-  console.log('lastjump is' + elem.lastjump)
+function ScrollTo(name){
+	scrollToRow(document.getElementById(name));
 }
+
+//*****SHOW POPUP*****
+function popupShow(popup) {
+    var popup = document.getElementById(popup).querySelector(".popuptext");
+    popup.classList.toggle("show");
+}
+
+
+
+
+
+
 
 
 
