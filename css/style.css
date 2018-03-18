@@ -531,6 +531,7 @@ figure img {
 	/***mainNav***/
 	#mainNav {
 		width: 100%;
+		top: -65px;
 	}
 	
 	.nav-button,

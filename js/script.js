@@ -29,12 +29,6 @@ if (document.documentElement.clientWidth > 1024) { //Viewport wider than 1024px
 	}
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
 //*****PAGE SCROLL*****
 function ScrollTo(name) {
   //init thread
@@ -42,17 +36,22 @@ function ScrollTo(name) {
 }
 
 function ScrollToRow(elem) {
-  var jump = elem.getBoundingClientRect().top * .1;
+  var jump = elem.getBoundingClientRect().top * .2;
   document.documentElement.scrollTop += jump;
+  
   //lastjump detects anchor unreachable, also manual scrolling to cancel animation if scroll > jump
   if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
-    elem.lastjump = Math.abs(jump);
+	elem.lastjump = Math.abs(jump);
     setTimeout(function() {
       ScrollToRow(elem);
     }, "20");
   } else {
     elem.lastjump = null;
   }
+  console.log('jump is' + jump)
+  console.log('lastjump is' + elem.lastjump)
 }
+
+
 
 
