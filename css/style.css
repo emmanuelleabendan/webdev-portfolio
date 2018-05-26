@@ -25,7 +25,7 @@ body {
 
 /***fonts***/
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, #rowSkills li {
 	font-family: 'Signika', sans-serif;
 	line-height: 1.2em;
 }
@@ -34,7 +34,7 @@ h4 {
 	margin-top: 20px;
 }
 
-p, a, span {
+nav *, p, a, span, form * {
 	font-family: 'Lato', sans-serif;
 }
 
@@ -118,6 +118,21 @@ p, a, span {
     color: #00374b;
 }
 
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li:hover,
+nav a:hover {
+	text-decoration: underline;	
+}
+
+#socialIcons a:hover,
+.socialMedias a:hover {
+    opacity: 0.75;
+}
+
 /***rowBanner***/
 #rowBanner {
     text-align: center;
@@ -139,7 +154,7 @@ p, a, span {
 
 #colLeft:before {
     content: "";
-    background: rgba(0,0,0,0.60);
+    background: rgba(0,32,43,0.95);
     position: absolute;
     top: 0;
     left: 0;
@@ -158,15 +173,36 @@ p, a, span {
 
 #colLeft img {
     max-width: 150px;
+	border-radius: 100%;
 }
 
-
-#colLeft a {
-	color: #00b5f0;
-	font-weight: 600;
-	margin-top: 10px;
+#dl-resume-wrapper {
+    display: inline-block;
 }
 
+#dl-resume-wrapper > * {
+    color: #00b5f0;
+}
+
+#dl-resume-wrapper > a {
+    background: rgba(0,0,0,0.5);
+    height: 70px;
+    width: 70px;
+    float: none;
+    display: block;
+    margin: 10px auto;
+    border-radius: 100%;
+	transition: 0.3s;
+}
+
+#dl-resume-wrapper > a:hover {
+    color: #fff;
+}
+
+#dl-resume-wrapper .fa {
+    font-size: 2em;
+    line-height: 70px;
+}
 
 #aboutBox {
 	background: url("../img/my-portfolio-about-box-background.jpg") no-repeat scroll center center / cover transparent;	
@@ -189,13 +225,18 @@ p, a, span {
     padding: 40px;
 }
 
+#colMid .fa, 
+#colRight .fa {
+    font-size: 4em;
+}
+
 .boxContentWrapper {
 	overflow: hidden;
 }
 
 .boxContentWrapper:before {
 	content: "";
-	background-color: rgba(0,0,0,0.65);
+	background-color: rgba(0,18,25,0.75);
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -221,6 +262,10 @@ p, a, span {
     margin-top: 10px;
 }
 
+#rowBanner .text {
+    margin: 15px auto;
+}
+
 .boxContentWrapper:hover {
 	cursor: pointer;
 }
@@ -230,10 +275,6 @@ p, a, span {
 	transition: 1s;
     background-color: rgba(255,255,255,0.75);
 	border-radius: 20px;
-}
-
-#rowBanner .fa {
-    font-size: 4em;
 }
 
 /***rows***/
@@ -255,24 +296,28 @@ p, a, span {
     padding: 10px 0;
 }
 
-.colHeading h2,
 .socialMedias h3,
 #rowSkills h3,
 #rowEducation h3 {
 	color: #00374b;
 }
 
-.colContent ul {
-    padding: 10px 20px;
-}
-
 figure img {
 	width: 100%;
 }
 
-/*rowAbout*/
-#rowAbout .left figure {
-	margin-top: 20px;
+.colHeading h2 {
+	color: #fff;
+	display: inline-block;
+}
+
+#rowAbout .col2 {
+	background: url("../img/about-me-picture.jpg") no-repeat scroll center center / cover transparent;	
+	min-height: 300px;
+}
+
+.abt-fig1 {
+    margin-top: 30px;
 }
 
 .contactDetails {
@@ -282,13 +327,16 @@ figure img {
 
 .contactDetails h3 {
     color: #85e1ff;
-    margin-top: 20px;
 }
 
 .contactDetails h4,
 .contactDetails p,
 .contactDetails a {
     color: #fff;
+}
+
+.contactDetails a:hover {
+    text-decoration: none;
 }
 
 .socialMedias {
@@ -298,6 +346,39 @@ figure img {
 .socialMedias img {
     width: 50px;
 	margin: 15px 5px 0 0;
+}
+
+/*form*/
+form {
+    border: 1px solid #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px;
+    width: 100%;
+    background-color: #3490cb;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00374b;
+    color: #fff;
 }
 
 /*rowWorks*/
@@ -310,11 +391,18 @@ figure img {
     margin: 20px auto;
     display: inline-block;
 	max-width: 250px;
-	vertical-align: top;
+	vertical-align: top;	
 }
 
 .colProjects figcaption {
-    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    background: #00374b;
+    margin-bottom: 5px;
+}
+
+.colProjects .img-wrapper {
+    overflow: hidden;
 }
 
 #rowWorks h3 {
@@ -324,21 +412,32 @@ figure img {
 .colSampleWorks ul {
     text-align: center;
     background-color: #efefef;
+}
+
+.colSampleWorks ul:first-of-type {
     padding-top: 20px;
+    margin-top: 20px;
+}
+
+.colSampleWorks ul:last-of-type {
     padding-bottom: 20px;
-	margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.colSampleWorks .d-none {
+	display: none;
 }
 
 .colSampleWorks li {
     list-style: none;
     max-width: 200px;
-    height: 300px;
     display: inline-block;
     margin: 15px;
     border: 5px solid #ddd;
     padding: 10px;
     background-color: #fff;
     overflow: hidden;
+    vertical-align: top;
 }
 
 .colSampleWorks li:hover {
@@ -353,6 +452,31 @@ figure img {
 
 .colSampleWorks figcaption {
     margin-top: 10px;
+	padding: 10px;
+    color: #fff;
+    background: #00374b;
+}
+
+.colSampleWorks a {
+	text-decoration: none;
+}
+
+#works-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#view-more {
+    background: #3490cb;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+	cursor: pointer;
+}
+
+#view-more:hover {
+	background: #00374b;
 }
 
 /* popup */
@@ -396,36 +520,39 @@ figure img {
     animation: fadeIn 1s;
 }
 
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
-
 /***rowSkills***/
-.frameworks, 
-.others {
-    margin-top: 50px;
-}
-
 #rowSkills img {
     margin-top: 10px;
-    max-width: 80px;
+    max-width: 80px;    
+    max-height: 100px;   
+	opacity: 0;
+}
+
+#rowSkills .colContent ul {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+#rowSkills li {
+    padding: 10px;
+	opacity: 0;
 }
 
 /***rowEducation***/
 .educInfo,
-.employInfo {
+.employInfo,
+.trainingInfo {
     margin-top: 25px;
+    background: #efefef;
+    padding: 25px;
+    border-radius: 10px;
 }
 
 /***footer***/
 #footer {
-	height: 50px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
 /***backTotop***/
@@ -520,17 +647,24 @@ figure img {
 	}
 	
 	/***rowAbout***/
-	#rowAbout .left figure {
-		width: 49%;
+	.about-content {
+		display: flex;
 	}
 	
-	#rowAbout .left figure:first-of-type {
-		margin-right: 2%;
+	.about-content .colContent {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	.socialMedias {    
+		text-align: center;
 	}
 	
 	/***rowWorks***/	
 	.colProjects a {
-		margin: 20px 30px 0 0;
+		margin-left: 20px;
+		margin-right: 20px;
+		max-width: 50%;
 	}
 
 	/***GRID sizes***/
@@ -684,13 +818,12 @@ figure img {
 	/***rows***/
 	.rowContent {
 		width: 95%;
-		padding-top: 50px;
+		padding-top: 56px;
 		text-align: left;
 	}
 	
 	.rowContent .colWrapper {
 		padding: 40px;
-		min-height: 90vh;
 	}
 	
 	.colHeading,
@@ -699,24 +832,45 @@ figure img {
 	}
 	
 	/***rowAbout***/
-	#rowAbout .left figure {
-		width: 49%;
+	#rowAbout .colWrapper {
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 	
-	#rowAbout .left figure:first-of-type {
-		margin-right: 2%;
+	#rowAbout .col2 {
+		min-height: 100%;
+	}	
+	
+	#rowAbout .colWrapper, 
+	.about-content {
+		display: flex;
+	}
+	
+	#rowAbout .colContent {
+		padding: 0 20px;
+	}	
+	
+	#rowAbout .about-content {
+		padding-right: 0;
 	}
 	
 	/***rowSkills***/
 	#rowSkills img {
 		max-width: 100%;
+		margin: 15px;
+	}
+	
+	.extra-skills {
+		background-color: #efefef;
+		border-radius: 15px;
+		box-shadow: 2px 3px 5px rgba(0,0,0,0.15);
 	}
 	
 	/***rowWorks***/	
 	.colProjects a {
 		margin: 20px 30px;
-	}
-	
+	}	
+
 	/* popup */
 	.popuptext {
 		visibility: hidden;

@@ -4,17 +4,20 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
 	<title>Portfolio of Emmanuelle Abendan</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Signika|Lato" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animations.css">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
 
-	<main class="mainWrapper">
+	<main id="main" class="mainWrapper">
 
 		<header id="header" class="rowWrapper">
 			<nav id="mainNav" class="row close-nav">
@@ -38,8 +41,8 @@
 							<span>0949 328 4719</span>
 						</div>
 						<div id="socialIcons">
-							<a id="facebook" href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook icon"></a>
-							<a id="linkedin" href="https://www.linkedin.com/"><img src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
+							<a id="facebook" href="https://www.facebook.com/emmanuelle.abendan" target="_blank"><img src="img/facebook-icon.png" alt="Facebook icon"></a>
+							<a id="linkedin" href="https://www.linkedin.com/in/emmanuelle-abendan/" target="_blank"><img src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
 						</div>
 					</div>
 				</div>
@@ -49,10 +52,14 @@
 			<div class="colWrapper">
 				<div id="colLeft" class="col col-sm-12 col-md-12 col-lg-6 left">
 					<div class="contents">
-						<img src="img/emmanuelle-abendan.jpg">
-						<h1>Hi, I'm Eman!</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<a href="#">Download CV</a>
+						<img src="img/emmanuelle-abendan.jpg" alt="Photo of Emmanuelle Abendan">
+						<h1>Hi, I'm Eman!</h1>	
+						<p class="text">Welcome to my web developer portfolio!</p>	
+						<p class="text">This page is a fully responsive website created from scratch without the use of any framework primarily to showcase my skills in web development.</p>		
+						<div id="dl-resume-wrapper">
+							<p>Download my resume</p>
+							<a href="files/resume-abendan-emmanuelle.pdf" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
+						</div>
 					</div>
 				</div>
 				<div id="colMid" class="col col-sm-12 col-md-6 col-lg-3 left">
@@ -60,14 +67,14 @@
 						<div class="boxContent">
 							<i class="fa fa-user-circle" aria-hidden="true"></i>
 							<h3>About Me</h3>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p class="description">A few words to know more about me.</p>
 						</div>
 					</div>
 					<div id="educationBox" class="boxContentWrapper" onclick="ScrollTo('rowEducation')">
 						<div class="boxContent">
 							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 							<h3>Education and Employment</h3>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p class="description">My academic and employment history.</p>
 						</div>
 					</div>
 				</div>
@@ -76,186 +83,154 @@
 						<div class="boxContent">
 							<i class="fa fa-cogs" aria-hidden="true"></i>
 							<h3>My Works</h3>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p class="description">See some examples of my recent projects and works.</p>
 						</div>
 					</div>
 					<div id="skillsBox" class="boxContentWrapper" onclick="ScrollTo('rowSkills')">
 						<div class="boxContent">
 							<i class="fa fa-code" aria-hidden="true"></i>
 							<h3>My Skills</h3>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p class="description">Skills acquired through study, training, and experience.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="rowAbout" class="row rowContent">
-			<div class="colWrapper clear">
-				<div class="col colHeading">
-					<h2>About Me</h2>
-				</div>
-				<div class="col colContent col-sm-12 col-md-6 col-lg-7 left">
-					<div>
-						<p>My name is Emmanuelle Abendan, currently working as a front-end web developer. I have been involved in creating websites since 2010.</p>
-						<p>&nbsp;</p>
-						<p>I'm a family oriented person.</p>
-						<p>&nbsp;</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>&nbsp;</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-					<figure class="left">
-						<img src="https://lorempixel.com/400/260/" alt="Picture of Emmanuelle Abendan">
-					</figure>
-					<figure class="left">
-						<img src="https://lorempixel.com/400/260/" alt="Picture of Emmanuelle Abendan">
-					</figure>
-				</div>
-				<div class="col colContent col-sm-12 col-md-6 col-lg-5 right">
-					<div class="contactDetails">
-						<figure>
-							<img src="https://lorempixel.com/400/220/" alt="Picture of Emmanuelle Abendan">
+		<div class="col colHeading">
+					<h2 class="animated">About Me <i class="fa fa-user-circle" aria-hidden="true"></i></h2>
+		</div>
+		<div class="colWrapper clear">				
+				<div class="col colContent col-sm-12 col-md-12 col-lg-8 left about-content">
+					<div class="col colContent col-sm-12 col-md-6 col-lg-6 left">
+						<div>
+							<p>I am Emmanuelle V. Abendan, graduate of Information Technology with a bachelor’s degree at University of the East, Manila batch 2010.</p>
+							<p>&nbsp;</p>
+							<p>I have professional experience working on websites as a Web Designer/Developer since 2010. I am currently employed as a Front-End Web Developer in an outsourcing company in Bonifacio Global City. My role deals with building and maintaining websites for clients in the United Kingdom.</p>
+							<p>&nbsp;</p>
+							<p>I bring to any job strong work ethics and a desire to succeed, a willingness to cooperate with others and a need to produce quality work in a timely manner. The previous years I have spent working gave me a significant deal of experience, and I believe that this would be a great avenue as I am looking forward to gain more by aspiring a higher level of responsible and challenging role.</p>						
+						</div>
+						<figure class="left abt-fig1">
+							<img src="img/about-me-picture2.jpg" alt="Picture of Emmanuelle Abendan">
 						</figure>
+					</div>
+					<div class="col colContent col-sm-12 col-md-6 col-lg-6 right col2">	
+						<span></span>
+					</div>
+				</div>				
+				<div class="col colContent col-sm-12 col-md-12 col-lg-4 right">
+					<div class="contactDetails">										
 						<h3>My Contact Details</h3>
 						<h4>Mobile</h4>
 						<p>0949 328 4719</p>
 						<h4>Email</h4>
 						<p><a href="mailto:emmanuelle.abendan@gmail.com">emmanuelle.abendan@gmail.com</a></p>
+						
+						<form action="assets/form-mailer.php" method="POST">
+							<div>
+								<label for="name">Name</label>
+								<input id="name" type="text" name="name" placeholder="Enter name" required>
+
+								<label for="contactNumber">Contact Number</label>
+								<input id="contactNumber" type="text" name="number" placeholder="Enter contact number" required>
+
+								<label for="emailAddress">Email address</label>
+								<input id="emailAddress" type="email" name="email" placeholder="Enter email" required>
+
+								<label for="message">Your message</label>
+								<textarea id="message" placeholder="Enter your message" rows="6" name="message" required></textarea>
+							</div>
+							<button type="submit">Submit</button>
+						</form>
 					</div>
 					<div class="socialMedias">
 						<h3>My Social Medias</h3>
 						<div class="icons">
-							<a id="facebook" href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook icon"></a>
-							<a id="linkedin" href="https://www.linkedin.com/"><img src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
+							<a id="facebook" href="https://www.facebook.com/emmanuelle.abendan" target="_blank"><img src="img/facebook-icon.png" alt="Facebook icon"></a>
+							<a id="linkedin" href="https://www.linkedin.com/in/emmanuelle-abendan/" target="_blank"><img src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
 						</div>
 					</div>	
 				</div>
 			</div>
 		</section>
 		<section id="rowSkills" class="row rowContent">
-			<div class="colWrapper clear">
-				<div class="col colHeading">
-					<h2>My Skills</h2>
+			<div class="col colHeading">
+					<h2 class="animated">My Skills <i class="fa fa-cogs" aria-hidden="true"></i></h2>
 				</div>
-				<div class="col colContent col-sm-12 col-md-8 col-lg-8 left">
-					<div class="progLang">
-					<h3>Programming Languages</h3>
-						<img src="img/html-5-logo.png" alt="HTML5 logo">
-						<img src="img/css-3-logo.png" alt="CSS3 logo">
-						<img src="img/javascript-logo.png" alt="Javascript logo">
-						<img src="img/php-logo.png" alt="PHP logo">
-					</div>
-					<div class="frameworks">
-					<h3>Frameworks</h3>
-						<img src="https://lorempixel.com/150/100/">
-						<img src="https://lorempixel.com/150/100/">
-						<img src="https://lorempixel.com/150/100/">
-						<img src="https://lorempixel.com/150/100/">
-					</div>
-					<div class="others">
-					<h3>Others</h3>
-						<img src="https://lorempixel.com/150/100/">
-						<img src="https://lorempixel.com/150/100/">
-						<img src="https://lorempixel.com/150/100/">
-						<img src="https://lorempixel.com/150/100/">
-					</div>
+			<div class="colWrapper clear">				
+				<div class="col colContent col-sm-12 col-lg-8 left">
+					<div id="web-tech">
+						<h3>Web Technologies</h3>
+						<img class="web-tech-img animated" src="img/html-5-logo.png" alt="HTML5 logo">
+						<img class="web-tech-img animated" src="img/css-3-logo.png" alt="CSS3 logo">
+						<img class="web-tech-img animated" src="img/bootstrap-logo.png" alt="Bootstrap logo">
+						<img class="web-tech-img animated" src="img/javascript-logo.png" alt="JavaScript logo">
+						<img class="web-tech-img animated" src="img/jquery-logo.png" alt="jQuery logo">						
+						<img class="web-tech-img animated" src="img/ajax-logo.png" alt="AJAX logo">
+						<img class="web-tech-img animated" src="img/json-logo.png" alt="AJAX logo">						
+						<img class="web-tech-img animated" src="img/php-logo.png" alt="PHP logo">
+						<img class="web-tech-img animated" src="img/laravel-logo.png" alt="Laravel logo">
+						<img class="web-tech-img animated" src="img/git-logo.png" alt="Git logo">
+						<img class="web-tech-img animated" src="img/mysql-logo.png" alt="MySQL logo">
+					</div>					
 				</div>
-				<div class="col colContent col-sm-12 col-md-4 col-lg-4 right">
-					<h3>Extra Skills</h3>
+				<div class="col colContent col-sm-12 col-lg-4 right extra-skills">					
 					<ul>
-					<li>Skill 1</li>
-					<li>Skill 2</li>
-					<li>Skill 3</li>
-					<li>Skill 4</li>
-					<li>Skill 5</li>
-					<li>Skill 6</li>
-					<li>Skill 7</li>
+					<li class="animated skills">Web designing and development using custom HTML, CSS, Bootstrap, Content
+Management Systems (Websplanet, FatWire, Moonfruit, and DUDA), JavaScript, jQuery, AJAX, JSON, PHP, and Laravel</li>
+					<li class="animated skills">Database design using MySQL/MariaDB</li>
+					<li class="animated skills">Version control using Git</li>
+					<li class="animated skills">Image manipulation using Adobe Photoshop</li>
+					<li class="animated skills">Personal computer assembly, troubleshooting, and repair</li>
+					<li class="animated skills">Knowledgeable in WAMP and XAMP</li>
+					<li class="animated skills">Knowledgeable in MS Word, Excel, and Powerpoint</li>
+					<li class="animated skills">Knowledgeable in MS Visual Basic and MS Visual C#</li>
+					<li class="animated skills">Knowledgeable in Unity application</li>
+					</ul>
 				</div>
 			</div>
 		</section>
 		<section id="rowWorks" class="row rowContent">
-			<div class="colWrapper clear">
-				<div class="col colHeading">
-					<h2>My Works</h2>
-				</div>
+			<div class="col colHeading">
+				<h2 class="animated">My Works <i class="fa fa-code" aria-hidden="true"></i></h2>
+			</div>
+			<div class="colWrapper clear">				
 				<div class="col colContent colProjects">
 					<h3>Recent Projects</h3>
 					<div id="projects">
 						<a href="https://emmanuelleabendan.github.io/b3nc-abendan-emmanuelle/csp1/index.html" target="_blank">
 							<figure id="pop-up1" class="popup" onmouseenter="popupShow(this.id)" onmouseleave="popupShow(this.id)">
-								<img src="img/capstone-project-1.jpg" alt="Josie's Delicacies thumbnail">
 								<figcaption>Josie's Delicacies</figcaption>
-								<span class="popuptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+								<div class="img-wrapper">
+									<img src="img/capstone-project-1.jpg" alt="Josie's Delicacies thumbnail">	
+								</div>															
+								<span class="popuptext">A simple fully responsive website for a local business which sells homemade delicacies and desserts. Having a website for small businesses like this isn’t a norm in our country yet. I thought that it would be a good idea to give the business online presence for the purpose of generating more product orders/sales. This website is created using HTML, CSS, and Bootstrap.</span>
 							</figure>
 						</a>
 						<a href="https://seniorita-chartii.000webhostapp.com/" target="_blank">
 							<figure id="pop-up2" class="popup" onmouseenter="popupShow(this.id)" onmouseleave="popupShow(this.id)">
-								<img src="img/capstone-project-two.png" alt="Seniorita Chartii thumbnail">
 								<figcaption>Seniorita Chartii</figcaption>
-								<span class="popuptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+								<div class="img-wrapper">
+									<img src="img/capstone-project-two.png" alt="Seniorita Chartii thumbnail">	
+								</div>									
+								<span class="popuptext">This website is a fully responsive E-Commerce site for Seniorita Chartii. They manufacture and sell women's apparel, wholesale and retail. The project was built using HTML, Custom CSS, JavaScript, and PHP. Frameworks such as Bootstrap, AJAX, and JQuery are also used. MariaDB is the database for this project using SQL queries.</span>
 							</figure>
 						</a>
-						<a href="https://emmanuelleabendan.github.io/b3nc-abendan-emmanuelle/csp1/index.html" target="_blank">
+						<a href="https://imabloggercsp3.000webhostapp.com" target="_blank">
 							<figure id="pop-up3" class="popup" onmouseenter="popupShow(this.id)" onmouseleave="popupShow(this.id)">
-								<img src="img/capstone-project-1.jpg" alt="Project 1 thumbnail">
-								<figcaption>Capstone Project 3</figcaption>
-								<span class="popuptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+								<figcaption>I'm a Blogger</figcaption>
+								<div class="img-wrapper">
+									<img src="img/capstone-project-3.jpg" alt="Project 1 thumbnail">
+								</div>									
+								<span class="popuptext">A fully responsive blog site for personal use of anybody. This is mainly built with the PHP framework Laravel, together with  Custom CSS, JavaScript, Bootstrap, AJAX, and JQuery.</span>
 							</figure>
 						</a>
 					</div>
 				</div>
 				<div class="col colContent colSampleWorks">
 					<h3>Some examples of websites I've worked on</h3>
-					<ul>
-						<li>					
-							<a href="https://www.radcliffeglassandwindows.co.uk/" target="_blank">
-								<figure>
-									<img src="img/radcliffeglassandwindows-thumb.jpg" alt="Radcliffe Glass &amp; Windows thumbnail">
-								</figure>
-								<figcaption>Radcliffe Glass &amp; Windows</figcaption>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.thevikingblindco.com/" target="_blank">
-								<figure>
-									<img src="img/thevikingblindco-thumb.jpg" alt="The Viking Blind Co thumbnail">								
-								</figure>
-								<figcaption>The Viking Blind Co</figcaption>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.mossmouldings.co.uk/" target="_blank">
-								<figure>
-									<img src="img/moss-mouldings-thumb.jpg" alt="Moss Mouldings thumbnail">									
-								</figure>
-								<figcaption>Moss Mouldings</figcaption>
-							</a>
-						</li>
-						<li>					
-							<a href="http://www.kirkrefrigeration.co.uk/" target="_blank">
-								<figure>
-									<img src="img/kirk-refrigeration-thumb.jpg" alt="KIRK Refrigeration thumbnail">									
-								</figure>
-								<figcaption>KIRK Refrigeration</figcaption>
-							</a>
-						</li>
-						<li>					
-							<a href="http://www.mjdheatingservices.co.uk/" target="_blank">
-								<figure>
-									<img src="img/mjd-plumbing-heating-services-thumb.jpg" alt="MJD Plumbing &amp; Heating Services ltd thumbnail">
-								</figure>
-								<figcaption>MJD Plumbing &amp; Heating Services ltd</figcaption>
-							</a>
-						</li>
-						<li>					
-							<a href="https://www.veitchihomes.com/" target="_blank">
-								<figure>
-									<img src="img/veitchi-homes-thumb.jpg" alt="Veitchi Homes thumbnail">									
-								</figure>
-								<figcaption>Veitchi Homes</figcaption>
-							</a>
-						</li>
-						<li>					
+					<ul class="work-list animated fadeIn">						
+						<li class="sample-work">					
 							<a href="https://www.bespokeshelters.co.uk/" target="_blank">
 								<figure>
 									<img src="img/bespoke-shelters-thumb.jpg" alt="Bespoke Shelters thumbnail">									
@@ -263,7 +238,49 @@
 								<figcaption>Bespoke Shelters</figcaption>
 							</a>
 						</li>
-						<li>					
+						<li class="sample-work">					
+							<a href="https://www.seasons-roofing.co.uk/" target="_blank">
+								<figure>
+									<img src="img/seasons-roofing-thumb.jpg" alt="Seasons Roofing thumbnail">
+								</figure>
+								<figcaption>Seasons Roofing</figcaption>
+							</a>
+						</li>
+						<li class="sample-work">					
+							<a href="https://www.mossmouldings.co.uk/" target="_blank">
+								<figure>
+									<img src="img/moss-mouldings-thumb.jpg" alt="Moss Mouldings thumbnail">									
+								</figure>
+								<figcaption>Moss Mouldings</figcaption>
+							</a>
+						</li>
+						<li class="sample-work">					
+							<a href="http://www.kirkrefrigeration.co.uk/" target="_blank">
+								<figure>
+									<img src="img/kirk-refrigeration-thumb.jpg" alt="KIRK Refrigeration thumbnail">									
+								</figure>
+								<figcaption>KIRK Refrigeration</figcaption>
+							</a>
+						</li>
+					</ul>
+					<ul class="work-list d-none animated fadeIn">
+						<li class="sample-work">					
+							<a href="https://www.thevikingblindco.com/" target="_blank">
+								<figure>
+									<img src="img/thevikingblindco-thumb.jpg" alt="The Viking Blind Co thumbnail">								
+								</figure>
+								<figcaption>The Viking Blind Co</figcaption>
+							</a>
+						</li>					
+						<li class="sample-work">					
+							<a href="https://www.veitchihomes.com/" target="_blank">
+								<figure>
+									<img src="img/veitchi-homes-thumb.jpg" alt="Veitchi Homes thumbnail">									
+								</figure>
+								<figcaption>Veitchi Homes</figcaption>
+							</a>
+						</li>						
+						<li class="sample-work">					
 							<a href="https://www.alexanderwindows.co.uk/" target="_blank">
 								<figure>
 									<img src="img/alexander-windows-thumb.jpg" alt="Alexander Windows thumbnail">									
@@ -271,23 +288,7 @@
 								<figcaption>Alexander Windows</figcaption>
 							</a>
 						</li>
-						<li>					
-							<a href="https://www.premierglazing-sheffield.co.uk/" target="_blank">
-								<figure>
-									<img src="img/premier-glazing-services-ltd-thumb.jpg" alt="Premier Glazing Services thumbnail">									
-								</figure>
-								<figcaption>Premier Glazing Services</figcaption>
-							</a>
-						</li>
-						<li>					
-							<a href="http://www.gastechheating.co.uk/" target="_blank">
-								<figure>
-									<img src="img/gastech-heating-plumbing-thumb.jpg" alt="Gastech Heating and Plumbing thumbnail">								
-								</figure>
-								<figcaption>Gastech Heating and Plumbing</figcaption>
-							</a>
-						</li>
-						<li>					
+						<li class="sample-work">					
 							<a href="https://www.capitolstairlifts.co.uk/" target="_blank">
 								<figure>
 									<img src="img/capitol-stairlifts-thumb.jpg" alt="Capitol Stairlifts thumbnail">									
@@ -295,7 +296,25 @@
 								<figcaption>Capitol Stairlifts</figcaption>
 							</a>
 						</li>
-						<li>					
+					</ul>
+					<ul class="work-list d-none animated fadeIn">
+						<li class="sample-work">					
+							<a href="https://www.premierglazing-sheffield.co.uk/" target="_blank">
+								<figure>
+									<img src="img/premier-glazing-services-ltd-thumb.jpg" alt="Premier Glazing Services thumbnail">									
+								</figure>
+								<figcaption>Premier Glazing Services</figcaption>
+							</a>
+						</li>
+						<li class="sample-work">					
+							<a href="http://www.gastechheating.co.uk/" target="_blank">
+								<figure>
+									<img src="img/gastech-heating-plumbing-thumb.jpg" alt="Gastech Heating and Plumbing thumbnail">								
+								</figure>
+								<figcaption>Gastech Heating and Plumbing</figcaption>
+							</a>
+						</li>						
+						<li class="sample-work">					
 							<a href="https://www.gmfoundations.co.uk/" target="_blank">
 								<figure>
 									<img src="img/gm-building-foundations-thumb.jpg" alt="GM Building Foundations thumbnail">
@@ -303,39 +322,62 @@
 								<figcaption>GM Building Foundations</figcaption>
 							</a>
 						</li>
-						<li>					
+						<li class="sample-work">					
 							<a href="http://www.groundsellcontracting.com/" target="_blank">
 								<figure>
 									<img src="img/groundsell-contracting-limited-thumb.jpg" alt="Groundsell Contracting Ltd thumbnail">
 								</figure>
 								<figcaption>Groundsell Contracting Ltd</figcaption>
 							</a>
-						</li>
-						<li>					
-							<a href="https://www.seasons-roofing.co.uk/" target="_blank">
-								<figure>
-									<img src="img/seasons-roofing-thumb.jpg" alt="Seasons Roofing thumbnail">
-								</figure>
-								<figcaption>Seasons Roofing</figcaption>
-							</a>
-						</li>			
-
+						</li>	
 					</ul>
+					<ul class="work-list d-none animated fadeIn">											
+						<li class="sample-work">					
+							<a href="https://www.radcliffeglassandwindows.co.uk/" target="_blank">
+								<figure>
+									<img src="img/radcliffeglassandwindows-thumb.jpg" alt="Radcliffe Glass &amp; Windows thumbnail">
+								</figure>
+								<figcaption>Radcliffe Glass &amp; Windows</figcaption>
+							</a>
+						</li>
+						<li class="sample-work">					
+							<a href="http://www.wiselyhomeimprovements.co.uk/" target="_blank">
+								<figure>
+									<img src="img/wisely-home-improvements-thumb.jpg" alt="Wisely Home Improvements">
+								</figure>
+								<figcaption>Wisely Home Improvements</figcaption>
+							</a>
+						</li>
+						<li class="sample-work">					
+							<a href="http://www.mjdheatingservices.co.uk/" target="_blank">
+								<figure>
+									<img src="img/mjd-plumbing-heating-services-thumb.jpg" alt="MJD Plumbing &amp; Heating Services ltd thumbnail">
+								</figure>
+								<figcaption>MJD Plumbing &amp; Heating Services ltd</figcaption>
+							</a>
+						</li>
+						<li class="sample-work">
+							<a href="https://www.lilysbespokebouquets.co.uk/" target="_blank">
+								<figure>
+									<img src="img/lilys-bespoke-bouquets-thumb.jpg" alt="Lily's Bespoke Bouquets">
+								</figure>
+								<figcaption>Lily's Bespoke Bouquets</figcaption>
+							</a>
+						</li>
+					</ul>
+					<div id="works-button">
+						<button id="view-more" onclick="viewMore()">View More</button>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section id="rowEducation" class="row rowContent">
+			<div class="col colHeading">
+				<h2 class="animated">Education and Employment <i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+			</div>
 			<div class="colWrapper clear">
-				<div class="col colHeading">
-					<h2>Education and Employment</h2>
-				</div>
-				<div class="col colContent col-sm-12 col-lg-6 left">
+				<div class="col colContent col-sm-12 col-md-12 col-lg-4 left">
 					<h3>Academic</h3>
-					<div class="educInfo">
-						<p><strong>TUITT Bootcamp</strong></p>
-						<p>Tuitt Incorporated</p>
-						<p>3rd Floor Caswynn Building, No. 134 Timog Avenue, Sacred Heart, <br />Quezon City, 1103 Metro Manila, Philippines</p>
-					</div>
 					<div class="educInfo">
 						<p><strong>Bachelor of Science in Information Technology</strong></p>
 						<p>Batch 2010</p>
@@ -348,8 +390,14 @@
 						<p>Antipolo Immaculate Conception School</p>
 						<p>Carigma extension, Tanag, Antipolo City</p>
 					</div>
+					<div class="educInfo">
+						<p><strong>Primary School</strong></p>
+						<p>Batch 1999</p>
+						<p>Doña Nieves Songco Memorial School</p>
+						<p>M. L. Quezon Extension, Mahabang Parang, <br />1930, Angono, Rizal</p>
+					</div>	
 				</div>
-				<div class="col colContent col-sm-12 col-lg-6 left">
+				<div class="col colContent col-sm-12 col-md-12 col-lg-4 left">
 					<h3>Work History</h3>
 					<div class="employInfo">
 						<p><strong>TATA Consultancy Services</strong></p>
@@ -367,13 +415,22 @@
 						<p>July 5, 2010 - Oct 20, 2010</p>
 					</div>
 				</div>
+				<div class="col colContent col-sm-12 col-md-12 col-lg-4 left">
+					<h3>Training</h3>
+					<div class="trainingInfo">
+						<p><strong>Tuitt Incorporated (Coding Bootcamp)</strong></p>
+						<p>Certified with 2nd Top Performer achievement</p>
+						<p>3rd Floor Caswynn Building, No. 134 Timog Avenue, Sacred Heart, <br />Quezon City, 1103 Metro Manila, Philippines</p>
+						<p>Oct 2017 - May 2018</p>
+					</div>					
+				</div>
 			</div>
 		</section>
 		<footer id="footer" class="row clear">
-			<p>Copyright &copy; 2017</p>
+			<p>Copyright &copy; 2018 Emmanuelle Abendan</p>
 		</footer>
 		
-		<button onclick="ScrollTo('header')" id="backToTop" title="Go to top">Top</button>
+		<button onclick="ScrollTo('main')" id="backToTop" title="Go to top">Top</button>
 		
 	</main><!--/.mainWrapper -->
 	
